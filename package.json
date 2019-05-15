@@ -1,0 +1,90 @@
+{
+  "name": "react-doodle",
+  "description": "React component library with natural feel to it",
+  "version": "0.0.0-development",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arvigeus/react-doodle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arvigeus/react-doodle/issues"
+  },
+  "main": "dist/index.js",
+  "umd:main": "dist/react-doodle.umd.production.js",
+  "module": "dist/react-doodle.es.production.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --env=jsdom",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "lint:code": "eslint --fix 'src/**/*.{ts,tsx}'",
+    "lint:styles": "stylelint --fix 'src/**/*.{ts,tsx}'",
+    "lint": "run-s lint:code lint:styles",
+    "format": "pretty-quick",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release",
+    "prepush": "run-s lint test",
+    "commit-cz": "git-cz"
+  },
+  "peerDependencies": {
+    "react": ">=16.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-friendly"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-styled-friendly"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "@commitlint/travis-cli": "^7.6.1",
+    "@types/jest": "^24.0.13",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "docz": "^1.2.0",
+    "docz-plugin-netlify": "^1.1.4",
+    "docz-theme-default": "^1.2.0",
+    "eslint": "5.16.0",
+    "eslint-config-react-friendly": "^1.2.0",
+    "husky": "^2.3.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.10.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "semantic-release": "^15.13.14",
+    "stylelint": "10.0.1",
+    "stylelint-config-styled-friendly": "^1.2.0",
+    "tsdx": "^0.5.9",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
+  },
+  "resolutions": {
+    "docz/**/webpack": "4.28.4"
+  },
+  "keywords": [
+    "react",
+    "styled-components",
+    "typescript"
+  ]
+}
