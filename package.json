@@ -59,7 +59,7 @@
     "extends": "stylelint-config-styled-friendly"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.0.0",
+    "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.0.0",
     "@commitlint/travis-cli": "^8.0.0",
     "@testing-library/react": "^8.0.1",
